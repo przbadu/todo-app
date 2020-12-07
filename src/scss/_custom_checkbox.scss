@@ -1,0 +1,70 @@
+.custom-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+
+  // hide the browser's default checkbox
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    &:checked {
+      ~ .checkmark {
+        background: $check-background;
+        &:after {
+          display: block;
+        }
+      }
+    }
+  }
+  // TODO: add grediant border on hover
+  &:hover {
+    input {
+      ~ .checkmark {
+        // border-image-source: $check-background;
+        // &:before {
+        //   content: "";
+        //   position: absolute;
+        //   top: 0;
+        //   right: 0;
+        //   bottom: 0;
+        //   left: 0;
+        //   z-index: -1;
+        //   background-color: 1px solid $check-background;
+        //   margin: 10px;
+        //   border-radius: inherit;
+        // }
+      }
+    }
+  }
+
+  // create a custom checkbox
+  .checkmark {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+
+    // create the checkmark/indicator (hidden when not checked)
+    &:after {
+      left: 9px;
+      top: 5px;
+      width: 5px;
+      height: 10px;
+      content: "";
+      position: absolute;
+      display: none;
+      border: solid white;
+      border-width: 0 1px 1px 0;
+      transform: rotate(45deg);
+    }
+  }
+}

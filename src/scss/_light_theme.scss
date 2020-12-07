@@ -1,0 +1,66 @@
+.light {
+  background-color: $light-primary;
+  color: $dark-text-primary-color;
+  label.active {
+    color: $light-border-color !important;
+    text-decoration: line-through;
+  }
+  .custom-checkbox {
+    .checkmark {
+      border: 1px solid $light-border-color;
+    }
+  }
+
+  .container {
+    .add-todo-container {
+      background-color: $light-secondary;
+      input {
+        color: $light-text-primary-color;
+        caret-color: $bright-blue;
+      }
+    }
+    .todo-list-container {
+      background-color: $white;
+      border-top: 1px solid #f1f1f1;
+      border-left: 1px solid #f1f1f1;
+      border-right: 1px solid #f1f1f1;
+
+      .todo-list-item {
+        border-bottom: 1px solid $light-border-color;
+        label {
+          color: $light-text-primary-color;
+        }
+      }
+    }
+  }
+  .todo-filters-container {
+    background-color: $white;
+    border-left: 1px solid #f1f1f1;
+    border-right: 1px solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
+
+    .items-count {
+      color: $light-text-secondary-color;
+    }
+    a {
+      color: $light-text-secondary-color;
+      &:hover {
+        color: $light-text-primary-color;
+      }
+      &.active {
+        color: $bright-blue;
+      }
+    }
+  }
+  footer {
+    color: $light-text-secondary-color;
+    p {
+      a {
+        color: $light-text-secondary-color;
+        &:hover {
+          color: $light-text-primary-color;
+        }
+      }
+    }
+  }
+}

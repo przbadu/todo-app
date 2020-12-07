@@ -1,0 +1,32 @@
+// font-family
+$font-family: "Josefin Sans", sans-serif;
+
+// sizes
+$mobile: 375px;
+$tablet: 768px;
+$desktop: 1440px;
+
+// colors
+$bright-blue: hsl(220, 98%, 61%);
+$check-background: linear-gradient(
+  120deg,
+  hsl(192, 100%, 67%),
+  hsl(280, 87%, 65%)
+);
+$white: #fff;
+
+// light theme
+$light-primary: hsl(0, 0%, 98%);
+$light-secondary: hsl(236, 33%, 92%);
+$light-border-color: hsl(233, 11%, 84%);
+$light-text-secondary-color: hsl(236, 9%, 61%);
+$light-text-primary-color: hsl(235, 19%, 35%);
+
+// dark theme
+$dark-primary: hsl(235, 21%, 11%);
+$dark-secondary: hsl(235, 24%, 19%);
+$dark-text-primary-color: hsl(236, 33%, 92%);
+$dark-text-secondary-color: hsl(234, 39%, 85%);
+$dark-highlighted-color: hsl(234, 11%, 52%);
+$dark-item-border-color: hsl(233, 14%, 35%);
+$dark-inactive-check-border: hsl(237, 14%, 26%);

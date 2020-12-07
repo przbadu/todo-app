@@ -1,0 +1,59 @@
+.dark {
+  background-color: $dark-primary;
+  color: $dark-text-primary-color;
+
+  label.active {
+    color: $dark-highlighted-color !important;
+    text-decoration: line-through;
+  }
+  .custom-checkbox {
+    .checkmark {
+      border: 1px solid $dark-inactive-check-border;
+    }
+  }
+
+  .container {
+    .add-todo-container {
+      background-color: $dark-secondary;
+      input {
+        color: $dark-text-primary-color;
+        caret-color: $bright-blue;
+      }
+    }
+    .todo-list-container {
+      background-color: $dark-secondary;
+      .todo-list-item {
+        border-bottom: 1px solid $dark-inactive-check-border;
+        label {
+          color: $dark-text-secondary-color;
+        }
+      }
+    }
+  }
+  .todo-filters-container {
+    background-color: $dark-secondary;
+    .items-count {
+      color: $dark-highlighted-color;
+    }
+    a {
+      color: $dark-highlighted-color;
+      &:hover {
+        color: $dark-text-primary-color;
+      }
+      &.active {
+        color: $bright-blue;
+      }
+    }
+  }
+  footer {
+    color: $dark-item-border-color;
+    p {
+      a {
+        color: $dark-highlighted-color;
+        &:hover {
+          color: $dark-text-primary-color;
+        }
+      }
+    }
+  }
+}
