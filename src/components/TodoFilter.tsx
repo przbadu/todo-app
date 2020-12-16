@@ -1,11 +1,23 @@
-export default function TodoFilter({
+import { ITodo } from "../App";
+
+interface TodoFilterProps {
+  todos: ITodo[];
+  clearCompleted: () => void;
+  setFilterkey: React.Dispatch<React.SetStateAction<string>>;
+  filterKey: string; // TODO: replace with enum
+}
+
+const TodoFilter = ({
   todos,
   filterKey,
   setFilterkey,
   clearCompleted,
-}) {
-  const activeTodosCount = () => todos.filter((t) => !t.completed).length;
-  const activeClassName = (filter) => (filterKey === filter ? "active" : "");
+}: TodoFilterProps): JSX.Element => {
+  const activeTodosCount = () =>
+    todos.filter((t: ITodo): boolean => !t.completed).length;
+
+  const activeClassName = (filter: string): string =>
+    filterKey === filter ? "active" : "";
 
   return (
     <div className="todo-filters-container">
@@ -40,4 +52,6 @@ export default function TodoFilter({
       </a>
     </div>
   );
-}
+};
+
+export default TodoFilter;

@@ -45,19 +45,27 @@ body {
     .add-todo-container {
       border-radius: 5px;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
       width: 100%;
-      padding: 20px;
+      padding: 20px 20px 0 20px;
       margin-bottom: 30px;
 
-      input {
-        margin-left: 10px;
-        padding-top: 5px;
+      form {
         flex-grow: 1;
-        background-color: transparent;
-        border: none;
-        outline: none;
+        justify-content: space-between;
+        input {
+          margin-left: 10px;
+          padding-top: 5px;
+          flex-grow: 1;
+          background-color: transparent;
+          border: none;
+          outline: none;
+          width: 100%;
+        }
+        button {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
       }
     }
     .todo-list-container {

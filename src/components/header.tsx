@@ -1,7 +1,13 @@
 import IconSun from "./../images/icon-sun.svg";
 import IconMoon from "./../images/icon-moon.svg";
 
-export default function header({ theme, toggleTheme }) {
+interface HeaderProps {
+  theme: string;
+  toggleTheme: () => void;
+}
+
+// TODO: theme should be enum 'light', 'dark'
+const Header = ({ theme, toggleTheme }: HeaderProps): JSX.Element => {
   return (
     <div className="header">
       <h1>Todo</h1>
@@ -15,4 +21,6 @@ export default function header({ theme, toggleTheme }) {
       />
     </div>
   );
-}
+};
+
+export default Header;
